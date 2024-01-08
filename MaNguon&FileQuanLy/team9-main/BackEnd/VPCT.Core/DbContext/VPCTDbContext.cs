@@ -89,7 +89,7 @@ namespace VPCT.Core.DbContext
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=VPCT;Integrated Security=true";
+            string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=VPCT;Integrated Security=true,TRUSTED_CONNECTION = TRUE";
             base.OnConfiguring(optionsBuilder);
             if (!optionsBuilder.IsConfigured)
             {
